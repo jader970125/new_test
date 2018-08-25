@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string.h>
+#include <cmath>
+
+using namespace std;
+
+float ca,co,hipo, angulo, a, b, c,d;
+float calcularhipo (float a, float b)
+{
+  c=sqrt(pow(a,2) + pow(b,2));
+  return c;
+}
+float calculardeg (float a, float b)
+{
+  d= (atan(a/b))*(180/3.1416);
+  return d;
+}
+int main()
+{
+    cout << "Ingrese los dos catetos de un triangulo rectangulo: " << endl;
+    cin >> co >> ca;
+    hipo = calcularhipo (co,ca);
+    angulo = calculardeg (co,ca);
+    cout << "La hipotenusa del triangulo es: " << hipo << " y el angulo es: " << angulo << endl;
+
+    return 0;
+}
